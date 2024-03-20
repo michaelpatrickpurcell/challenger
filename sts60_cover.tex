@@ -1,0 +1,35 @@
+\documentclass[a4paper, DIV=20]{scrartcl}
+\usepackage[left=0pt, right=0pt, bottom=0.9cm]{geometry}
+\usepackage{fontspec}
+\setmainfont[Scale=3.0]{Stalinist One}
+\setmainfont[Scale=3.0]{Tex Gyre Heros-Bold}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{contour}
+\contourlength{1.5mm}
+\usepackage{eso-pic}
+
+\definecolor{RedSky}{HTML}{b14a2a}
+\definecolor{YellowSky}{HTML}{fff2bd}
+\definecolor{BrownOutline}{HTML}{8c3c14}
+
+\pagecolor{RedSky}
+\pagestyle{empty}
+\begin{document}
+\AddToShipoutPictureBG{
+\begin{tikzpicture}[remember picture, overlay]
+	\path (current page.center) ++(0,2.0cm) node {\includegraphics[width=1.08\pagewidth]{space_shuttle_launchpad_modified.png}};
+\end{tikzpicture}
+}
+\phantom{a}
+
+\vfill
+
+\begin{center}
+%\Huge \contour*{BrownOutline}{\textcolor{YellowSky}{STS-86}}
+%\Huge \textcolor{YellowSky}{CHALLENGER}
+\Huge \contour*{BrownOutline}{\textcolor{YellowSky}{CHALLENGER}}
+
+\end{center}
+\end{document}
